@@ -3,7 +3,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "build:all": "yarn workspaces foreach -pt run build"
+    "build:all": "yarn workspaces foreach -pt run build",
+    "new-package": "yarn hygen new package"
   },
   "workspaces": {
     "packages": [
@@ -12,6 +13,7 @@
   },
   "packageManager": "yarn@3.2.4",
   "devDependencies": {
+    "hygen": "^6.2.11",
     "typescript": "^4.8.4"
   }
 }
