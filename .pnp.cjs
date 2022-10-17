@@ -18,17 +18,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       {\
         "name": "@team-comit/test",\
         "reference": "workspace:packages/test"\
-      },\
-      {\
-        "name": "@team-comit/test3",\
-        "reference": "workspace:packages/test3"\
       }\
     ],\
     "enableTopLevelFallback": true,\
     "ignorePatternData": "(^(?:\\\\.yarn\\\\/sdks(?:\\\\/(?!\\\\.{1,2}(?:\\\\/|$))(?:(?:(?!(?:^|\\\\/)\\\\.{1,2}(?:\\\\/|$)).)*?)|$))$)",\
     "fallbackExclusionList": [\
       ["@team-comit/test", ["workspace:packages/test"]],\
-      ["@team-comit/test3", ["workspace:packages/test3"]],\
       ["root-workspace-0b6124", ["workspace:."]]\
     ],\
     "fallbackPool": [\
@@ -67,17 +62,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/test/",\
           "packageDependencies": [\
             ["@team-comit/test", "workspace:packages/test"],\
-            ["@yarnpkg/esbuild-plugin-pnp", "virtual:a22084bcbf3fc14b23f0478139cda6d48d9e07672972bd07ba63bad46109a86de92213e52f2db22b0789e6af0e97cb0237d9a066df4b551720041495b31a3525#npm:3.0.0-rc.15"],\
-            ["esbuild", "npm:0.15.11"]\
-          ],\
-          "linkType": "SOFT"\
-        }]\
-      ]],\
-      ["@team-comit/test3", [\
-        ["workspace:packages/test3", {\
-          "packageLocation": "./packages/test3/",\
-          "packageDependencies": [\
-            ["@team-comit/test3", "workspace:packages/test3"],\
             ["@yarnpkg/esbuild-plugin-pnp", "virtual:a22084bcbf3fc14b23f0478139cda6d48d9e07672972bd07ba63bad46109a86de92213e52f2db22b0789e6af0e97cb0237d9a066df4b551720041495b31a3525#npm:3.0.0-rc.15"],\
             ["esbuild", "npm:0.15.11"]\
           ],\
