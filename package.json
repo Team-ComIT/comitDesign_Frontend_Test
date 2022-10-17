@@ -12,6 +12,7 @@
   },
   "packageManager": "yarn@3.2.4",
   "devDependencies": {
+    "hygen": "^6.2.11",
     "typescript": "^4.8.4"
   }
 }
