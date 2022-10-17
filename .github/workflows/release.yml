@@ -1,9 +1,6 @@
 name: Release
 
-on: 
-  pull_request:
-    branches:
-      - "@root/#4_release-setting"
+on: pull_request
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
