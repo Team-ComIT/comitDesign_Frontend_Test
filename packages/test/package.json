@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "main": "./build/index.js",
   "license": "MIT",
+  "private": false,
   "scripts": {
     "build:clean": "rm -rf ./build",
     "build": "yarn build:clean && tsc && node ./esbuild.config.js"
@@ -14,5 +15,8 @@
   "files": [
     "./build"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "packageManager": "yarn@3.2.4"
 }
