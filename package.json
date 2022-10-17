@@ -1,0 +1,17 @@
+{
+  "author": "kimulchan <leerabi577@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build:all": "yarn workspaces foreach -pt run build"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/**"
+    ]
+  },
+  "packageManager": "yarn@3.2.4",
+  "devDependencies": {
+    "typescript": "^4.8.4"
+  }
+}
