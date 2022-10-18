@@ -1,18 +1,17 @@
-name: Release
+name: Production-Release
 
-on:
-  push:
-    branches:
-      - main
+on: pull_request
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
-
-permissions: read-all|write-all
 
 jobs:
   release:
     name: Release
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      contents: write
+
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v2
@@ -24,6 +23,13 @@ jobs:
 
       - name: Install Dependencies
         run: yarn install --immutable
+      - name: Creating .npmrc
+        run: |
+          cat << EOF > "$HOME/.npmrc"
+            //registry.npmjs.org/:_authToken=$NPM_TOKEN
+          EOF
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Create Release Pull Request or Publish to npm
         uses: changesets/action@v1
