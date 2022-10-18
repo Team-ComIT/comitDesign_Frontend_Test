@@ -4,12 +4,13 @@ on: pull_request
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
-permissions: write-all
-
 jobs:
   release:
     name: Release
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v2
