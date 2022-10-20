@@ -9,3 +9,7 @@ export const hello2 = () => {
 export const hello3 = () => {
   console.log(5);
 };
+
+export const hello5 = () => {
+  console.log(7);
+};
