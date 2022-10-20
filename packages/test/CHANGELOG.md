@@ -1,5 +1,12 @@
 # @team-comit/test
 
+## 0.1.2
+
+### Patch Changes
+
+- a1dda22: 테스트
+- c99aa86: test
+
 ## 0.1.1
 
 ### Patch Changes
